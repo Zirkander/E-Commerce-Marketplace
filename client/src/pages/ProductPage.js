@@ -26,11 +26,11 @@ const ProductPage = (props) => {
         <div>
             <div>
                 <div>
-                    <img src={product.images[0].src}/>
+                    <img src={product.images}/>
                 </div>
                 <div>
                     <p>{product.title}</p>
-                    <p>${product.variants[0].price}</p>
+                    <p>${product.variants}</p>
                     <p>{product.description}</p>
                     <button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</button>
                 </div>

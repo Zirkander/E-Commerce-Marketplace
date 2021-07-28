@@ -3,12 +3,12 @@ import Client from "shopify-buy";
 
 const ShopContext = React.createContext();
 
-    const client = Client.buildClient({
+const client = Client.buildClient({
     storefrontAccessToken: "5bfcd7942880ba77a8804a3f6fbe9f42",
     domain: "Seattle-Thread.myshopify.com",
-    });
+});
     
-    class ShopProvider extends Component {
+class ShopProvider extends Component {
     state = {
         products: [],
         product: {},
@@ -82,22 +82,22 @@ const ShopContext = React.createContext();
         this.setState({ isCartOpen: true });
     };
 
-    render() {
-        return (
-        <ShopContext.Provider
-            value={{
-            ...this.state,
-            fetchAllProducts: this.fetchAllProducts,
-            fetchProductWithId: this.fetchProductWithId,
-            closeCart: this.closeCart,
-            openCart: this.openCart,
-            addItemToCheckout: this.addItemToCheckout,
-            }}
-        >
-            {this.props.children}
-        </ShopContext.Provider>
-        );
-    }
+        render() {
+            return (
+            <ShopContext.Provider
+                value={{
+                ...this.state,
+                fetchAllProducts: this.fetchAllProducts,
+                fetchProductWithId: this.fetchProductWithId,
+                closeCart: this.closeCart,
+                openCart: this.openCart,
+                addItemToCheckout: this.addItemToCheckout,
+                }}
+            >
+                {this.props.children}
+            </ShopContext.Provider>
+            );
+        }
 }
 
 const ShopConsumer = ShopContext.Consumer;

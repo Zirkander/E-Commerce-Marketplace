@@ -18,6 +18,7 @@
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.2",
     "shopify-buy": "^2.11.0",
+    "styletron-react": "^6.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
