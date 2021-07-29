@@ -1,4 +1,4 @@
-/* footer css */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -16,4 +16,14 @@
 
 .homeImage {
   width: 250px;
+}
+
+
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+.blogImg {
+  height: 250px;
 }
