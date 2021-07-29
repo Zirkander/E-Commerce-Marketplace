@@ -1,0 +1,38 @@
+.main-footer {
+	color: white;
+	background-color: #333436;
+	padding-top: 2em;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+.list-unstyled {
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.foot-title,
+.list-title {
+	font-style: italic;
+	font-weight: bolder;
+}
+
+/* a,
+a:link {
+	text-decoration: none;
+	color: white !important;
+} */
+
+/* a:hover {
+	color: lightgray !important;
+} */
+
+.list-unstyled li a {
+	color: white;
+	text-decoration: none;
+}
+
+.list-unstyled li a:hover {
+	color: lightgray;
+}

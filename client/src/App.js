@@ -8,22 +8,29 @@ import ProductPage from "./pages/ProductPage";
 import Navbar from "./sharedComponents/Navbar";
 // import Cart from "./sharedComponents/Cart";
 import SideBar from "./sharedComponents/Sidebar";
+import ShopBody from "./sharedComponents/ShopBody";
+import Footer from "./sharedComponents/Footer";
+import { useState } from "react";
+
 
 function App() {
+
+  const [id, setID] = useState("");
+
     return (
-        <div style={{ textAlign: "left", width: "80%", margin: "0 auto", display: "flex"}} >
+        <div>
+            <Navbar />
             <ShopProvider>
-              <div>
-                <Navbar />
-                <Router>
-                  <HomePage path="/" />
-                  <ProductPage path="/product/:id"/>
-                </Router>
-              </div>
+                <div>
+                  <Router>
+                    <HomePage path="/" id = {id}/>
+                    <ProductPage id = {id} path="/product/:id" />
+                  </Router>
+                </div>
               <div>
                 {/* <Cart /> */}
-                <SideBar />
               </div>
+              <Footer />
             </ShopProvider>
         </div>
     );

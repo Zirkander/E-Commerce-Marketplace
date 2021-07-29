@@ -52,9 +52,11 @@ class ShopProvider extends Component {
             quantity: parseInt(quantity, 10),
         },
         ];
+
+        console.log(lineItemsToAdd);
         const checkout = await client.checkout.addLineItems(
-        this.state.checkout.id,
-        lineItemsToAdd
+            this.lineItemsToAdd.variantId,
+            lineItemsToAdd
         );
         this.setState({ checkout: checkout });
         console.log(checkout);

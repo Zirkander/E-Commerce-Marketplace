@@ -1,10 +1,11 @@
-import React, { useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-import { ShopContext } from '../context/shopContext';
-import Loading from '../sharedComponents/Loading';
+import React, { useEffect, useContext } from 'react'
+import { useParams } from 'react-router-dom'
+import { ShopContext } from '../context/shopContext'
+import { Text, Div, Button, Row, Col, Container } from 'atomize'
+import Loading from '../sharedComponents/Loading'
 
 const ProductPage = (props) => {
-    let { id } = props.id;
+    let id = props.id;
     const { fetchProductWithId, addItemToCheckout, product } = useContext(ShopContext)
     // const [product, setProduct] = useState(null)
     // async function fetchData() {
@@ -14,28 +15,28 @@ const ProductPage = (props) => {
 
     useEffect(() => {
         fetchProductWithId(id)
-        
+
         // fetchData()
         return () => {
             // setProduct(null)
         };
     }, [ fetchProductWithId, id])
 
-    //if (!product.title) return <Loading />
+    if (!product.title) return <Loading />
     return (
-        <div>
-            <div>
-                <div>
-                    <img src={product.images}/>
-                </div>
-                <div>
-                    <p>{product.title}</p>
-                    <p>${product.variants}</p>
-                    <p>{product.description}</p>
-                    <button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</button>
-                </div>
-            </div>
-        </div>
+        <Container>
+            <Row m={{ b: "2rem" }} p="2rem">
+                <Col>
+                    <img src={product.images[0].src}/>
+                </Col>
+                <Col>
+                    <Text tag="h1" textColor="black500" textWeight="200" m={{ y: '2rem' }}>{product.title}</Text>
+                    <Text tag="h3" m={{ y: '2rem' }} textWeight="200">${product.variants[0].price}</Text>
+                    <Text tag="p" textSize="paragraph" textColor="gray900" textWeight="200">{product.description}</Text>
+                    <Button rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.id, 1)}>Add To Cart</Button>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
