@@ -46,21 +46,20 @@ class ShopProvider extends Component {
     };
 
     addItemToCheckout = async (variantId, quantity) => {
-        const lineItemsToAdd = [
-        {
+        const lineItemsToAdd =
+        [{
             variantId,
-            quantity: parseInt(quantity, 10),
-        },
-        ];
+            quantity: parseInt(quantity),
+        }];
 
         console.log(lineItemsToAdd);
         const checkout = await client.checkout.addLineItems(
-            this.lineItemsToAdd.variantId,
+            lineItemsToAdd.variantId,
             lineItemsToAdd
         );
+        console.log(this.lineItemsToAdd.variantId);
         this.setState({ checkout: checkout });
         console.log(checkout);
-
         this.openCart();
     };
 
