@@ -7,6 +7,7 @@ import { Image,Container,Row,Col, Carousel } from 'react-bootstrap';
 import Sidebar from '../sharedComponents/Sidebar';
 import Footer from '../sharedComponents/Footer'
 import Navbar from '../sharedComponents/Navbar'
+import HomeCarousel from '../sharedComponents/Carousel';
 import "../App.css";
 
 

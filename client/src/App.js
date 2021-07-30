@@ -14,6 +14,7 @@ import Cart from "./sharedComponents/Cart";
 import ShopBlog from "./pages/ShopBlog";
 import { useState } from "react";
 import ViewCart from "./pages/ViewCartPage";
+import ShopItems from "./pages/ShopItems"
 
 
 function App() {
@@ -28,8 +29,9 @@ function App() {
                   <Router>
                     <HomePage path="/home" id = {id}/>
                     <ProductPage id = {id} path="/product/:id" />
-                    <ViewCart path="/view/cart"/>
-                    <ShopBlog path="/blogs"/>
+                    <ViewCart path="/view/cart" />
+                    <ShopItems path="/items" />
+                    <ShopBlog path="/blogs" />
                   </Router>
                 </div>
               <div>

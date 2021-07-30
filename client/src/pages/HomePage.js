@@ -52,10 +52,10 @@ const HomePage = () => {
       <Container>
         <Col>
     <Image className="mt-5 mb-5" src={logo1} fluid />
-    <a className="fs-1 blog" href="">Blog</a>
+    <a className="fs-1 blog" href="/blogs">Blog</a>
     </Col>
     </Container>
-    </section>
+    </section>  
   </>
     )
 }
