@@ -14,6 +14,7 @@ import shirt from '../imgs/seattle-Shirt4.jpeg'
 import model1 from '../imgs/seattle-model2.jpeg'
 import jeans from '../imgs/seattle-jeans.jpeg'  
 import HomeCarousel from "../sharedComponents/Carousel"
+import "../App.css";
 
 
 const HomePage = () => {
@@ -28,15 +29,34 @@ const HomePage = () => {
 
     if (!products){ return <Loading />}
     return (  
-        <div>
-          <Container style={{marginTop: '50px'}}>
-            <HomeCarousel />
-            <Row>
-                {products.map(product => (
-                    <Col><Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}><img src={product.images[0].src} className="homeImage" ></img></Link></Col>))};
-            </Row>
-          </Container>
-        </div>
+        <>  
+        
+      <HomeCarousel /> 
+      <h1 className="mt-5 text-center font-Nato Sans">Confidence in Every Situation.</h1>
+      <h3 className="text-center mt-3 font-Nato Sans">Independently Owned. Carefully Curated. Exceptional Quality.</h3>
+    <Container className="mt-5">
+      <Row className="mt-5">
+      <Col><img className="homeImg" src={jeans} alt=""></img> <a className="toCenter" href="">Jeans</a>  </Col>
+      <Col><img className="homeImg" src={pant} alt=""></img> <a className="toCenter" href="">Pants</a> </Col>
+      <Col><img className="homeImg" src={blazer} alt=""></img> <a className="toCenter" href="">Blazers</a> </Col>
+      <Col><img className="homeImg" src={shirt} alt=""></img> <a className="toCenter" href="">Shirt</a> </Col>
+      </Row>
+    <Row className="mt-4">
+      <Col><img className="homeImg" src={watch} alt=""></img> <a className="toCenter more" href="">Accessories</a> </Col>
+      <Col><img className="homeImg" src={model} alt=""></img> <a className="toCenter" href="">Taylored</a> </Col>
+      <Col><img className="homeImg" src={knit} alt=""></img> <a className="toCenter" href="">Knits</a> </Col>
+      <Col><img className="homeImg" src={model1} alt=""></img> <a className="toCenter" href="">Jackets</a> </Col>
+    </Row>
+    </Container>
+    <section>
+      <Container>
+        <Col>
+    <Image className="mt-5 mb-5" src={logo1} fluid />
+    <a className="fs-1 blog" href="">Blog</a>
+    </Col>
+    </Container>
+    </section>
+  </>
     )
 }
 
