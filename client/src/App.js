@@ -29,7 +29,7 @@ function App() {
                     <HomePage path="/home" id = {id}/>
                     <ProductPage id = {id} path="/product/:id" />
                     <ViewCart path="/view/cart"/>
-                    {/* <ShopBlog path="/blogs"/> */}
+                    <ShopBlog path="/blogs"/>
                   </Router>
                 </div>
               <div>
