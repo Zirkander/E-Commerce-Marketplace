@@ -1,18 +1,15 @@
 import { Card,CardGroup,Container } from 'react-bootstrap';
-import blog1 from '../imgs/seattle-blog1.jpeg'
-import blog2 from '../imgs/seattle-blog2.png'
-import blog3 from '../imgs/seattle-blog-3.jpeg'
-import blog4 from '../imgs/seattle-blog4.jpeg'
+import blog2 from '../imgs/seattle-blog2.png';
 
 
 function ShopBlog() {
   return (
-<>
+<> 
 <h1 className="mb-5" >Mens Blog</h1> 
 <Container>
 <CardGroup className="mt-5">
   <Card>
-    <Card.Img className="blogImg" variant="top" src={blog1} />
+    <Card.Img className="blogImg" variant="top" src={blog2} />
     <Card.Body>
       <Card.Title>
         SPRING 2020 COLLECTIONS HAVE STARTED TO ARRIVE!</Card.Title>
@@ -40,7 +37,7 @@ function ShopBlog() {
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img className="blogImg" variant="top" src={blog3} />
+    <Card.Img className="blogImg" variant="top" src={blog2} />
     <Card.Body>
       <Card.Title>New Arrivals for Fall 2019</Card.Title>
       <Card.Text>

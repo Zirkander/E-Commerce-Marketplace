@@ -4,15 +4,20 @@ import { ShopContext } from '../context/shopContext'
 import Loading from '../sharedComponents/Loading'
 import Client from "shopify-buy";
 import { Image,Container,Row,Col, Carousel } from 'react-bootstrap';
-import Sidebar from '../sharedComponents/Sidebar';
-import Footer from '../sharedComponents/Footer'
-import Navbar from '../sharedComponents/Navbar'
-import HomeCarousel from '../sharedComponents/Carousel';
-import "../App.css";
+import logo1 from '../imgs/logoSeattle1.jpeg'
+import knit from '../imgs/seattle-knit.jpeg'
+import pant from '../imgs/seattle-pants.jpeg'
+import watch from '../imgs/seattle-watch.jpeg'
+import blazer from '../imgs/seattle-blazer.jpeg'
+import model from '../imgs/seattle-model.jpeg'
+import shirt from '../imgs/seattle-Shirt4.jpeg'
+import model1 from '../imgs/seattle-model2.jpeg'
+import jeans from '../imgs/seattle-jeans.jpeg'  
+import HomeCarousel from "../sharedComponents/Carousel"
 
 
-const HomePage = () => {
-    const {fetchAllProducts, products} = useContext(ShopContext)
+const FilterProductPage = () => {
+  const {fetchAllProducts, products, activeFilters} = useContext(ShopContext)
 
     useEffect(() => {
         fetchAllProducts()
@@ -23,11 +28,8 @@ const HomePage = () => {
 
     if (!products){ return <Loading />}
     return (  
-        <> 
-        <Navbar /> 
-      <h1 className="mt-5 text-center font-Nato Sans">Shop.</h1>
-    <Sidebar />
-      <div>
+        <div>
+          <SideBar/>
           <Container style={{marginTop: '50px'}}>
             <HomeCarousel />
             <Row>
@@ -36,9 +38,7 @@ const HomePage = () => {
             </Row>
           </Container>
         </div>
-        <Footer />
-  </>
     )
 }
 
-export default HomePage
+export default FilterProductPage;

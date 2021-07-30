@@ -11,7 +11,8 @@ const client = Client.buildClient({
 class ShopProvider extends Component {
     state = {
         products: [],
-        product: {},
+        product: {},    
+        activeFilters: [],  
         checkout: {},
         isCartOpen: false,
     };
@@ -23,7 +24,7 @@ class ShopProvider extends Component {
         if (localStorage.checkout) {
             this.fetchCheckout(localStorage.checkout);
         } else {
-            this.createCheckout();
+        this.createCheckout();
         }
         //if there is no checkout_id in localStorage then we will create a new checkout
 
@@ -49,15 +50,14 @@ class ShopProvider extends Component {
         const lineItemsToAdd =
         [{
             variantId,
-            quantity: parseInt(quantity),
+            quantity: parseInt(quantity, 10),
         }];
 
         console.log(lineItemsToAdd);
         const checkout = await client.checkout.addLineItems(
-            lineItemsToAdd.variantId,
+            this.state.checkout.id,
             lineItemsToAdd
         );
-        console.log(this.lineItemsToAdd.variantId);
         this.setState({ checkout: checkout });
         console.log(checkout);
         this.openCart();

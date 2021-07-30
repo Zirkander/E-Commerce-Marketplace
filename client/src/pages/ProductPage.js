@@ -14,6 +14,8 @@ import {
 } from "react-bootstrap";
 import atomize, { Text } from "atomize";
 import Loading from "../sharedComponents/Loading";
+import SideBar from "../sharedComponents/Sidebar";
+import Cart from "../sharedComponents/Cart";
 
 const ProductPage = (props) => {
   let id = props.id;
@@ -37,6 +39,8 @@ const ProductPage = (props) => {
   if (!product.title) return <Loading />;
   return (
       <>
+    <SideBar/>
+    <Cart />
     <Container>
       <Row className="mb-big">
         <div className="mb-huge"></div>
@@ -60,18 +64,20 @@ const ProductPage = (props) => {
               <option value="Green">Two</option>
             </Form.Select>
           
-            <Button className="my-3" rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.id, 1)}>Add To Cart</Button>
+            <Button className="my-3" rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
             <hr className="my-4"></hr>
             <p className="mt-3">{product.description}</p>
             
           </Form>
+        <div>
           <ul class="list-group pb-5">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
+            <li class="list-group-item">Vendor: {product.vendor}</li>
+            <li class="list-group-item">Type: {product.productType}</li>
+            {/* <li class="list-group-item">Collection: {collection.collection}</li>  */}
+            <li class="list-group-item">A fourth item</li >
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+        </div>
         </Col>
       </Row>
     </Container>
@@ -100,7 +106,6 @@ const ProductPage = (props) => {
     src={product.images[0].src}
     alt="Third slide"
   />
-
   <Carousel.Caption></Carousel.Caption>
 </Carousel.Item>
 </Carousel> */}

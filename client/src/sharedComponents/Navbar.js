@@ -5,7 +5,7 @@ function ShopNavbar() {
   return (
     <Navbar fixed="top"  bg="light" expand="lg" >
   <Container>
-  <Navbar.Brand href="#home">
+  <Navbar.Brand href="/home">
       <img
         src={logo}
         width="650rem"
@@ -18,7 +18,7 @@ function ShopNavbar() {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         
-        <Nav.Link href="#home">Shop</Nav.Link>
+        <Nav.Link href="/items">Shop</Nav.Link>
         <NavDropdown title="Clothing" id="basic-nav-dropdown"> 
           
           <NavDropdown.Item href="#action/3.1">Shirts</NavDropdown.Item>
@@ -45,8 +45,8 @@ function ShopNavbar() {
           {/* <NavDropdown.Divider /> */}
         </NavDropdown>
         <Nav.Link href="#link">Sale</Nav.Link>
-        <Nav.Link href="#link">Blog</Nav.Link>
-        <Nav.Link href="#link">Account</Nav.Link>
+        <Nav.Link href="/blogs">Blog</Nav.Link>
+        <Nav.Link href="/view/cart">Account</Nav.Link>
         <Nav.Link href="#link">Gift Card</Nav.Link>
         
       </Nav>

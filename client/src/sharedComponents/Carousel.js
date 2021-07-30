@@ -17,7 +17,7 @@ function HomeCarousel() {
 				<Carousel.Item>
 					<img
 						className="d-block w-100 mx-auto"
-						src="https://www.roddandgunn.com/on/demandware.static/-/Library-Sites-rodd-shared-library/default/dwdd6fbcab/00%20ANZ/AW18/STORE%20SEARCH%20FOOTER/RG_SEARCH_STORE_FOOTER_AW18.jpg"
+						src="https://assets2.mr-mag.com/wp-content/uploads/2019/05/Russell-Wilson-Amazon-Fashion.jpg"
 						alt="Second slide"
 					/>
 				
