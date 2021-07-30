@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import "../App.css";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
+import logo1 from '../imgs/logoSeattle1.jpeg'
 import {
   Image,
   Container,
@@ -13,7 +14,6 @@ import {
 } from "react-bootstrap";
 import atomize, { Text } from "atomize";
 import Loading from "../sharedComponents/Loading";
-import logoSeattle from "../imgs/logoSeattle.png";
 
 const ProductPage = (props) => {
   let id = props.id;
@@ -36,56 +36,18 @@ const ProductPage = (props) => {
 
   if (!product.title) return <Loading />;
   return (
-    // <Container>
-    //     <Row m={{ b: "2rem" }} p="2rem">
-    //         <Col>
-    //             <img src={product.images[0].src}/>
-    //         </Col>
-    //         <Col>
-    //             <Text tag="h1" textColor="bl  ack500" textWeight="200" m={{ y: '2rem' }}>{product.title}</Text>
-    //             <Text tag="h3" m={{ y: '2rem' }} textWeight="200">${product.variants[0].price}</Text>
-    //             <Text tag="p" textSize="paragraph" textColor="gray900" textWeight="200">{product.description}</Text>
-    //             <Button rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.id, 1)}>Add To Cart</Button>
-    //         </Col>
-    //     </Row>
-    //     <Image className="mt-5" src={logoSeattle} fluid />
+      <>
     <Container>
       <Row className="mb-big">
         <div className="mb-huge"></div>
         <Col>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="blog-img"
-                src={product.images[0].src}
-                alt="First slide"
-              />
-              <Carousel.Caption></Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="blog-img"
-                src={product.images[0].src}
-                alt="Second slide"
-              />
-
-              <Carousel.Caption></Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="blog-img"
-                src={product.images[0].src}
-                alt="Third slide"
-              />
-
-              <Carousel.Caption></Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+        <Image className="mt-5 homeImage" src={product.images[0].src} fluid />
+        <hr className="toRight"></hr>
         </Col>
-        <Col>
-          <h2>{product.title}</h2>
-          <h1>{product.variants[0].price}</h1>
-          <Form>
+        <Col className="itemBack  leftBorder px-4" >
+          <h2 className="my-4">{product.title}</h2>
+          <h1 className="my-3">{product.variants[0].price}</h1>
+          <Form >
             <Form.Select aria-label="Default select example">
               <option>Small</option>
               <option value="1">Medium</option>
@@ -97,11 +59,49 @@ const ProductPage = (props) => {
               <option value="Blue"></option>
               <option value="Green">Two</option>
             </Form.Select>
+          
+            <Button className="my-3" rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.id, 1)}>Add To Cart</Button>
+            <hr className="my-4"></hr>
+            <p className="mt-3">{product.description}</p>
+            
           </Form>
+          <ul class="list-group pb-5">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">A fourth item</li>
+  <li class="list-group-item">And a fifth one</li>
+</ul>
         </Col>
       </Row>
     </Container>
+    </>
   );
 };
+{/* <Carousel>
+<Carousel.Item>
+  <img
+    className="blog-img"
+    src={product.images[0].src}
+    alt="First slide"
+  />
+  <Carousel.Caption></Carousel.Caption>
+</Carousel.Item>
+<Carousel.Item>
+  <img
+    className="blog-img"
+    src={product.images[0].src}
+    alt="Second slide"
+  />
+</Carousel.Item>
+<Carousel.Item>
+  <img
+    className="blog-img"
+    src={product.images[0].src}
+    alt="Third slide"
+  />
 
+  <Carousel.Caption></Carousel.Caption>
+</Carousel.Item>
+</Carousel> */}
 export default ProductPage;
