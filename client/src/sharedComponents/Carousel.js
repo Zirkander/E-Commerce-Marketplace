@@ -9,7 +9,7 @@ function HomeCarousel() {
 				<Carousel.Item>
 					<img
 						className="d-block w-100 mx-auto"
-						src="https://cdn.shopify.com/s/files/1/0197/9808/collections/banner_rodd_gunn_fall_opt.jpg?v=1477417307"
+						src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
 						alt="First slide"
 					/>
 				</Carousel.Item>

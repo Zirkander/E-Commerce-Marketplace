@@ -47,6 +47,7 @@ function ShopNavbar() {
         <Nav.Link href="#link">Sale</Nav.Link>
         <Nav.Link href="/blogs">Blog</Nav.Link>
         <Nav.Link href="/view/cart">Account</Nav.Link>
+        <Nav.Link href="/view/cart">Cart</Nav.Link>
         <Nav.Link href="#link">Gift Card</Nav.Link>
         
       </Nav>

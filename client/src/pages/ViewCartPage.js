@@ -12,12 +12,12 @@ function ViewCart() {
 				<h4 style={{ marginLeft: '15%' }}>Cart</h4>
 			</body>
 
-			<div className="content-view-cart">
+			<div className="content-view-cart" style={{marginTop : "100px"}}>
 				<Table striped hover size="sm">
 					<thead>
 						<tr>
 							<th col span="3">
-								Cart (2 items)
+								Cart (3 items)
 							</th>
 						</tr>
 					</thead>
@@ -455,7 +455,6 @@ function ViewCart() {
 					</tbody>
 				</Table>
 			</div>
-			<h3>this is where the footer will go -------------------------- </h3>
 		</div>
 	);
 }
