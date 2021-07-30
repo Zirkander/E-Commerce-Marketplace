@@ -10,7 +10,10 @@ import Navbar from "./sharedComponents/Navbar";
 import SideBar from "./sharedComponents/Sidebar";
 import ShopBody from "./sharedComponents/ShopBody";
 import Footer from "./sharedComponents/Footer";
+import Cart from "./sharedComponents/Cart";
+import ShopBlog from "./pages/ShopBlog";
 import { useState } from "react";
+import ViewCart from "./pages/ViewCartPage";
 
 
 function App() {
@@ -19,16 +22,17 @@ function App() {
 
     return (
         <div>
-            <Navbar />
             <ShopProvider>
+              <Navbar />
                 <div>
                   <Router>
-                    <HomePage path="/" id = {id}/>
+                    <HomePage path="/home" id = {id}/>
                     <ProductPage id = {id} path="/product/:id" />
+                    <ViewCart path="/view/cart"/>
+                    {/* <ShopBlog path="/blogs"/> */}
                   </Router>
                 </div>
               <div>
-                {/* <Cart /> */}
               </div>
               <Footer />
             </ShopProvider>

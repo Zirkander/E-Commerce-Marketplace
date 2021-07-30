@@ -9,22 +9,22 @@ const Cart = () => {
     if (checkout.lineItems) {
         return (
             <SideDrawer isOpen={isCartOpen} onClose={closeCart}>
-                <Container d="flex" flexDir="column" h="100%">
+                <Container d="flex" flexDir="column" h="50%" style={{border: "1px black solid"}}>
                     <Row justify="space-between" border={{ b: '1px solid' }} p="0.7rem" borderColor="gray300">
                         <Text tag="h1" textColor="black500" textSize="paragraph" hoverTextColor="black700" transition="0.3s">Bag</Text>
-                        <Anchor onClick={() => closeCart()} ><Icon name="Cross" color="black500"/></Anchor>
+                        <Anchor onClick={(  ) => closeCart()} >Close</Anchor>
                     </Row>
-                    <Row flexGrow="2" p="0.7rem" overflow="auto" flexWrap="nowrap" flexDir="column">
+                    <Row flexGrow="1" p="0.7rem" overflow="auto" flexWrap="nowrap" flexDir="column">
                         {checkout.lineItems.length < 1 ?
                             <Row>
-                                <Col><Text tag="h1" textColor="black500" textSize="paragraph" hoverTextColor="black700" transition="0.3s">Cart Is Empty</Text></Col>
-                            </Row>
+                                <Col><Text tag="h1" textColor="black500" textSize="paragraph" hoverTextColor="black700" transition="0.2s">Cart Is Empty</Text></Col>
+                            </Row>  
                             :
                             <>
                                 {checkout.lineItems && checkout.lineItems.map(item => (
                                     <Row key={item.id} p={{ t:"5px" }}>
                                         <Col>
-                                            <Div bgImg={item.variant.image.src} bgSize="cover" bgPos="center" h="5rem" w="4rem"/>
+                                            <Div bgImg={item.variant.image.src} bgSize="cover" bgPos="center" h="1rem" w="1rem"/>
                                         </Col>
                                         <Col>
                                             <Text>{item.title}</Text>

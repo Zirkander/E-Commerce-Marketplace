@@ -34,5 +34,63 @@
   margin-bottom: 7rem;
 }
 
+:root {
+  --main-color: #d1422a;
+  --second-color: #1c1c1e;
+  --third-color: #333436;
+  --fourth-color: #edd998;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.page-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.content-wrap {
+	flex: 1;
+}
+
+.homeImage {
+  width: 250px;
+}
+
+
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+.blogImg {
+  height: 250px;
+}
+.mb-big {
+  margin-bottom: 5rem;
+}
+.mb-huge {
+  margin-bottom: 7rem;
+}
+.pb-big {
+  padding-bottom: 15rem;
+}
+.leftBorder {
+  border-left: 4px solid var(--main-color);
+}
+.itemBack {
+  background-color: var(--fourth-color);
+}
+.toRight {
+  position: relative;
+  right:85px;
+}
+
 
 
