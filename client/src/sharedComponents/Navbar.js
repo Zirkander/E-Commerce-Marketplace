@@ -52,7 +52,9 @@ function ShopNavbar() {
       </Nav>
     </Navbar.Collapse>
   </Container>
+ 
 </Navbar>
+
   );
 }
 
