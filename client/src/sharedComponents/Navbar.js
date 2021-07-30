@@ -8,10 +8,10 @@ function ShopNavbar() {
   <Navbar.Brand href="#home">
       <img
         src={logo}
-        width="765rem"
-        height="80px"
+        width="650rem"
+        height="70px"
         className="d-inline-block align-top"
-        alt="React Bootstrap logo"
+        alt="Seattle Thread Company logo"
       />
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
