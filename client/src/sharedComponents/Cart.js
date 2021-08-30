@@ -8,11 +8,11 @@ const Cart = () => {
 
     if (checkout.lineItems) {
         return (
-            <SideDrawer isOpen={isCartOpen} onClose={closeCart}>
-                <Container d="flex" flexDir="column" h="50%" style={{border: "1px black solid"}}>
+            <SideDrawer isOpen={isCartOpen} onClose={closeCart} w={{ xs: "100vw", sm: "16rem" }} >
+                <Container d="flex" flexDir="column" h="500px" style={{border: "1px black solid"}}>
                     <Row justify="space-between" border={{ b: '1px solid' }} p="0.7rem" borderColor="gray300">
                         <Text tag="h1" textColor="black500" textSize="paragraph" hoverTextColor="black700" transition="0.3s">Bag</Text>
-                        <Anchor onClick={(  ) => closeCart()} >Close</Anchor>
+                        <button onClick={(  ) => closeCart()} >Close</button>
                     </Row>
                     <Row flexGrow="1" p="0.7rem" overflow="auto" flexWrap="nowrap" flexDir="column">
                         {checkout.lineItems.length < 1 ?
@@ -24,8 +24,8 @@ const Cart = () => {
                                 {checkout.lineItems && checkout.lineItems.map(item => (
                                     <Row key={item.id} p={{ t:"5px" }}>
                                         <Col>
-                                            <Div bgImg={item.variant.image.src} bgSize="cover" bgPos="center" h="1rem" w="1rem"/>
-                                        </Col>
+                                            <Div bgImg={item.variant.image.src} bgSize="cover" bgPos="center" h="0.1rem" w="1rem"/>
+                                        </Col>  
                                         <Col>
                                             <Text>{item.title}</Text>
                                             <Text>{item.variant.title}</Text>
@@ -47,6 +47,10 @@ const Cart = () => {
                         </Anchor>
                     </Row>
                 </Container>
+                <Div d="flex" m={{ b: "4rem" }}>
+        <Icon name="AlertSolid" color="warning700" />
+        <Text p={{ l: "0.5rem", t: "0.25rem" }}>This is the modal</Text>
+                </Div>
             </SideDrawer>
         )
     }
@@ -54,5 +58,19 @@ const Cart = () => {
     return null
 
 }
+
+// <Div d="flex" justify="flex-end">
+// <Button
+// onClick={closeCart}
+// bg="gray200"
+// textColor="medium"
+// m={{ r: "1rem" }}
+// >
+// Cancel
+// </Button>
+// <Button onClick={closeCart} bg="info700">
+// Submit
+// </Button>
+// </Div>
 
 export default Cart
