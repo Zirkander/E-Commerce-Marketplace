@@ -3,7 +3,7 @@ import { Link } from '@reach/router';
 import { ShopContext } from '../context/shopContext'
 import Loading from '../sharedComponents/Loading'
 import Client from "shopify-buy";
-import { Image,Container,Row,Col, Carousel } from 'react-bootstrap';
+import { Image,Container,Row,Col } from 'react-bootstrap';
 import logo1 from '../imgs/logoSeattle1.jpeg'
 import knit from '../imgs/seattle-knit.jpeg'
 import pant from '../imgs/seattle-pants.jpeg'
