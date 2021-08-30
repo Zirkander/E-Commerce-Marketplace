@@ -39,43 +39,56 @@ const ProductPage = (props) => {
   if (!product.title) return <Loading />;
   return (
       <>
-    <SideBar/>
     <Cart />
     <Container>
       <Row className="mb-big">
         <div className="mb-huge"></div>
         <Col>
-        <Image className="mt-5 homeImage" src={product.images[0].src} fluid />
+        <Image className="productImg" src={product.images[0].src} fluid />
         <hr className="toRight"></hr>
         </Col>
         <Col className="itemBack  leftBorder px-4" >
           <h2 className="my-4">{product.title}</h2>
-          <h1 className="my-3">{product.variants[0].price}</h1>
+          <h1 className="my-4">{product.variants[0].price}</h1>
           <Form >
-            <Form.Select aria-label="Default select example">
+          <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+          <Form.Label column sm="2">
+            Size:
+          </Form.Label>
+            <Col sm="10">
+            <Form.Select aria-label="Default select example" className="input">
               <option>Small</option>
               <option value="1">Medium</option>
               <option value="2">Large</option>
               <option value="3">Xl</option>
             </Form.Select>
+            </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+            <Form.Label column sm="2">
+            Color:
+            </Form.Label>
+            <Col sm="10">
             <Form.Select aria-label="Default select example">
-              <option>Grey</option>
-              <option value="Blue"></option>
-              <option value="Green">Two</option>
+              <option value="Red">Red</option>
+              <option value="Blue">Blue</option>
+              <option value="Green">Green</option>
             </Form.Select>
-          
+            </Col>
+            </Form.Group>
             <Button className="my-3" rounded="0" shadow="3" bg="black500" m={{ y: '2rem' }} onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
             <hr className="my-4"></hr>
-            <p className="mt-3">{product.description}</p>
+            <p className="mt-3"></p>
             
           </Form>
         <div>
           <ul class="list-group pb-5">
-            <li class="list-group-item">Vendor: {product.vendor}</li>
-            <li class="list-group-item">Type: {product.productType}</li>
+            <li className="pb-3">Vendor: {product.vendor}</li>
+            <li className="pb-3">Description: {product.description}</li>
             {/* <li class="list-group-item">Collection: {collection.collection}</li>  */}
-            <li class="list-group-item">A fourth item</li >
-            <li class="list-group-item">And a fifth one</li>
+            <li className="pb-3">Type: {product.productType}</li>
+            <li className="pb-3">View More From <a href="">{product.vendor}</a> </li> 
           </ul>
         </div>
         </Col>
