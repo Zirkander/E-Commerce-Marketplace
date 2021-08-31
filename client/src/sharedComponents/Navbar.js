@@ -1,4 +1,4 @@
-import { Navbar,Container,Nav,NavDropdown } from 'react-bootstrap';
+import { Navbar,Container,Nav,NavDropdown, NavItem } from 'react-bootstrap';
 import logo from '../imgs/logoSeattle.png'
 
 function ShopNavbar() {
@@ -18,8 +18,12 @@ function ShopNavbar() {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <NavDropdown title="Shop" id="basic-nav-dropdown"> 
-          
-          <NavDropdown title="New Arrivals">New Arrivals</NavDropdown>
+          <NavDropdown id=" dropdown-item-button dropdown-button-drop-end" title="New Arrivals">
+            <NavItem>1</NavItem>
+            <NavItem>2</NavItem>
+            <NavItem>3</NavItem>
+            <NavItem>4</NavItem>
+          </NavDropdown>
           <NavDropdown title="Clothing">Clothing</NavDropdown>
           <NavDropdown title="About">About</NavDropdown>
           <NavDropdown title="Blog">Blog</NavDropdown>
