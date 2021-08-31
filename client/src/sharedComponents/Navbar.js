@@ -4,42 +4,67 @@ import logo from '../imgs/logoSeattle.png'
 function ShopNavbar() {
   return (
     <Navbar fixed="top"  bg="light" expand="lg" >
-  <Container>
-  <Navbar.Brand href="/home">
-      <img
-        src={logo}
-        width="650rem"
-        height="70px"
-        className="d-inline-block align-top"
-        alt="Seattle Thread Company logo"
-      />
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <NavDropdown title="Shop" id="basic-nav-dropdown"> 
-          <NavDropdown id=" dropdown-item-button dropdown-button-drop-end" title="New Arrivals">
-            <NavItem>1</NavItem>
-            <NavItem>2</NavItem>
-            <NavItem>3</NavItem>
-            <NavItem>4</NavItem>
-          </NavDropdown>
-          <NavDropdown title="Clothing">Clothing</NavDropdown>
-          <NavDropdown title="About">About</NavDropdown>
-          <NavDropdown title="Blog">Blog</NavDropdown>
-          {/* <NavDropdown.Divider /> */}
-        </NavDropdown>
-          {/* <NavDropdown.Divider /> */}
-        <Nav.Link href="#link">Brands</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/blogs">Blog</Nav.Link>
-        <Nav.Link href="/view/cart">Cart</Nav.Link>
-        
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
- 
-</Navbar>
+        <Container>
+        <Navbar.Brand href="/home">
+            <img
+              src={logo}
+              width="650rem"
+              height="70px"
+              className="d-inline-block align-top"
+              alt="Seattle Thread Company logo"
+            />
+          </Navbar.Brand>
+          <Navbar expand="lg">
+        <Container fluid>
+          <Navbar.Toggle aria-controls="navbar-dark-example" />
+          <Navbar.Collapse id="navbar">
+            <Nav>
+              <NavDropdown
+                id="dropdown-button-drop-end"
+                title="Shop"
+                drop="down"
+              >
+                <NavDropdown
+                  id="dropdown-button-drop-end"
+                  title="New Arrivals"
+                  drop="end"
+                >
+                  <NavItem>Outwerwear</NavItem>
+                  <NavItem>Sweaters & Knits</NavItem>
+                  <NavItem>Shirts</NavItem>
+                  <NavItem>Polos & T-Shirts</NavItem>
+                </NavDropdown>
+                <NavDropdown
+                  id="dropdown-button-drop-end"
+                  title="Clothing"
+                  drop="end"
+                >
+                  <NavItem>Outwerwear</NavItem>
+                  <NavItem>Sweaters & Knits</NavItem>
+                  <NavItem>Shirts</NavItem>
+                  <NavItem>Polos & T-Shirts</NavItem>
+                </NavDropdown>
+                <NavDropdown
+                  id="dropdown-button-drop-end"
+                  title="Accessories"
+                  drop="end"
+                >
+                  <NavItem>Outwerwear</NavItem>
+                  <NavItem>Sweaters & Knits</NavItem>
+                  <NavItem>Shirts</NavItem>
+                  <NavItem>Polos & T-Shirts</NavItem>
+                </NavDropdown>
+              </NavDropdown>
+              <Nav.Link href="#home">Brands</Nav.Link>
+              <Nav.Link href="#link">About</Nav.Link>
+              <Nav.Link href="#home">Blog</Nav.Link>
+              <Nav.Link href="#link">Search | Cart</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      </Container>
+    </Navbar>
 
   );
 }
