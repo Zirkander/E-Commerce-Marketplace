@@ -29,10 +29,11 @@ function ShopNavbar() {
                   title="New Arrivals"
                   drop="end"
                 >
-                  <NavItem>Outwerwear</NavItem>
-                  <NavItem>Sweaters & Knits</NavItem>
-                  <NavItem>Shirts</NavItem>
-                  <NavItem>Polos & T-Shirts</NavItem>
+                  <div class="d-flex">
+                    <div>Up Top</div>
+                    <div>Down Low</div>
+                    <div>Essentials</div>
+                  </div>
                 </NavDropdown>
                 <NavDropdown
                   id="dropdown-button-drop-end"
