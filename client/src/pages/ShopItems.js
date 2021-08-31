@@ -30,7 +30,7 @@ const HomePage = () => {
       <div>
           <Container style={{marginTop: '50px'}}>
             <HomeCarousel />
-            <Row>
+            <Row className="py-5">
                 {products.map(product => (
                     <Col><Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}><img src={product.images[0].src} className="homeImage" ></img></Link></Col>))};
             </Row>
