@@ -15,7 +15,7 @@ import ShopBlog from "./pages/ShopBlog";
 import { useState } from "react";
 import ViewCart from "./pages/ViewCartPage";
 import ShopItems from "./pages/ShopItems"
-
+import AllCompanies from "./pages/AllCompanies";
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
                     <ViewCart path="/view/cart" />
                     <ShopItems path="/items" />
                     <ShopBlog path="/blogs" />
+                    <AllCompanies path="/allCompanies" />
                   </Router>
                 </div>
               <div>
