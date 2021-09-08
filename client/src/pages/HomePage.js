@@ -28,7 +28,6 @@ const HomePage = () => {
 		};
 	}, [fetchAllProducts]);
 
-<<<<<<< HEAD
     if (!products){ return <Loading />}
     return (  
         <>  
@@ -53,7 +52,6 @@ const HomePage = () => {
   </>
     )
 }
-=======
 	if (!products) {
 		return <Loading />;
 	}
@@ -139,7 +137,5 @@ const HomePage = () => {
 			</section>
 		</>
 	);
-};
->>>>>>> e59b40a2bc299772c64f85355a716ab3737907db
 
 export default HomePage;
