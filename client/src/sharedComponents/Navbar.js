@@ -27,34 +27,15 @@ function ShopNavbar() {
               >
                 <NavDropdown
                   id="dropdown-button-drop-end"
-                  title="New Arrivals"
+                  title="Furniture"
                   drop="end"
+                  float="left"
                 >
                   <div class="d-flex">
-                    <div>Up Top</div>
-                    <div>Down Low</div>
-                    <div>Essentials</div>
+                    <div class="m-2">Wood</div>
+                    <div class="m-2">Metal</div>
+                    <div class="m-2">Other</div>
                   </div>
-                </NavDropdown>
-                <NavDropdown
-                  id="dropdown-button-drop-end"
-                  title="Clothing"
-                  drop="end"
-                >
-                  <NavItem>Outwerwear</NavItem>
-                  <NavItem>Sweaters & Knits</NavItem>
-                  <NavItem>Shirts</NavItem>
-                  <NavItem>Polos & T-Shirts</NavItem>
-                </NavDropdown>
-                <NavDropdown
-                  id="dropdown-button-drop-end"
-                  title="Accessories"
-                  drop="end"
-                >
-                  <NavItem>Outwerwear</NavItem>
-                  <NavItem>Sweaters & Knits</NavItem>
-                  <NavItem>Shirts</NavItem>
-                  <NavItem>Polos & T-Shirts</NavItem>
                 </NavDropdown>
               </NavDropdown>
               <Nav.Link href="#home">Brands</Nav.Link>
