@@ -97,29 +97,5 @@ const ProductPage = (props) => {
     </>
   );
 };
-{/* <Carousel>
-<Carousel.Item>
-  <img
-    className="blog-img"
-    src={product.images[0].src}
-    alt="First slide"
-  />
-  <Carousel.Caption></Carousel.Caption>
-</Carousel.Item>
-<Carousel.Item>
-  <img
-    className="blog-img"
-    src={product.images[0].src}
-    alt="Second slide"
-  />
-</Carousel.Item>
-<Carousel.Item>
-  <img
-    className="blog-img"
-    src={product.images[0].src}
-    alt="Third slide"
-  />
-  <Carousel.Caption></Carousel.Caption>
-</Carousel.Item>
-</Carousel> */}
+
 export default ProductPage;
