@@ -6,5 +6,9 @@
 }
 .carousel-item {
 	max-height: 70vh;
+}
 
+#homePageImg {
+	height: 75vh;
+	overflow: hidden;
 }
