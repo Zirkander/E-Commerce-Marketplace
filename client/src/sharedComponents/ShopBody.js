@@ -29,9 +29,6 @@ function ShopBody() {
     <Col><img className="img" src={model1} alt="clothes"></img></Col>
   </Row>
   </Container>
-  <Container>
-  
-  </Container>
 </>
   );
 }

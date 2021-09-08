@@ -1,5 +1,6 @@
 import { Navbar,Container,Nav,NavDropdown, NavItem } from 'react-bootstrap';
-import logo from '../imgs/logoSeattle.png'
+import logo from '../imgs/shop.svg'
+
 
 function ShopNavbar() {
   return (
@@ -58,7 +59,6 @@ function ShopNavbar() {
               </NavDropdown>
               <Nav.Link href="#home">Brands</Nav.Link>
               <Nav.Link href="#link">About</Nav.Link>
-              <Nav.Link href="#home">Blog</Nav.Link>
               <Nav.Link href="#link">Search | Cart</Nav.Link>
             </Nav>
           </Navbar.Collapse>

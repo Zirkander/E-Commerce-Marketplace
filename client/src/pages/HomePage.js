@@ -48,14 +48,6 @@ const HomePage = () => {
       <Col><img className="homeImg" src={model1} alt=""></img> <a className="toCenter" href="">Jackets</a> </Col>
     </Row>
     </Container>
-    <section>
-      <Container>
-        <Col>
-    <Image className="mt-5 mb-5" src={logo1} fluid />
-    <a className="fs-1 blog" href="/blogs">Blog</a>
-    </Col>
-    </Container>
-    </section>  
   </>
     )
 }
